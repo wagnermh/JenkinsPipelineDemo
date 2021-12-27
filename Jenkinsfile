@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Initial') {
             steps {
-                echo 'Hello World'
+                echo 'Initializing'
             }
         }
         stage('Build') {
@@ -20,6 +20,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing'
+            }
+        }
+        stage('Pre-Release') {
+            steps {
+                echo 'Pre-Releasing'
             }
         }
         stage('Release') {
